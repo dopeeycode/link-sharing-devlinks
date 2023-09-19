@@ -6,4 +6,13 @@
   body {
     font-family: 'Space Grotesk', sans-serif;
   }
+
 }
+
+button[data-active=true] {
+  @apply bg-indigo-200 bg-opacity-[28%]
+}
+
+
+
+
