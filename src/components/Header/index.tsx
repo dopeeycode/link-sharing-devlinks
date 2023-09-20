@@ -32,7 +32,7 @@ const Header = ({ setContentPage, contentPage }: HeaderProps) => {
               contentPage === 'links' && ' text-indigo-600'
             }`}
           >
-            <LinkIcon strokeWidth={'3px'} size={19} />
+            <LinkIcon strokeWidth={'3px'} size={23} />
 
             <span className="hidden md:block">Links</span>
           </Button>
@@ -43,24 +43,20 @@ const Header = ({ setContentPage, contentPage }: HeaderProps) => {
               contentPage === 'profile' && ' text-indigo-600'
             }`}
           >
-            <UserProfileIcon strokeWidth={'3px'} size={19} />
+            <UserProfileIcon strokeWidth={'3px'} size={23} />
 
-            <span className="hidden md:block">Profile Details</span>
+            <span className="hidden md:block">Detalhes de Perfil</span>
           </Button>
         </nav>
         <>
-          <Button
-            className="border py-3 hover:bg-indigo-500 hover:bg-opacity-40 
-            text-indigo-600 border-indigo-600 transition-colors duration-300"
-            asChild
-          >
+          <Button alt asChild>
             <Link to={'/preview'}>
               <EyeIcon
                 className="block md:hidden"
                 strokeWidth={'3px'}
-                size={19}
+                size={23}
               />
-              <span className="hidden md:block">Preview</span>
+              <span className="hidden md:block">Visualização</span>
             </Link>
           </Button>
         </>
