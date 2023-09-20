@@ -1,5 +1,8 @@
+import Phone from '@/assets/Phone'
 import Header from '@/components/Header'
 import { useState } from 'react'
+import Links from './components/Links'
+import ProfileDetails from './components/ProfileDetails'
 
 const Home = () => {
   const [contentPage, setContentPage] = useState<'links' | 'profile'>('links')
@@ -7,8 +10,18 @@ const Home = () => {
   return (
     <>
       <Header contentPage={contentPage} setContentPage={setContentPage} />
-      <h1>Ola mundo</h1>
-      {contentPage === 'links' ? <h1>Links</h1> : <h2>Profile</h2>}
+      <main className="min-h-[calc(100vh-106px)] grid lg:pt-[10vh] relative grid-cols-1">
+        <div className="max-w-[1200px] h-screen flex mx-auto py-10">
+          <section>
+            <div className="hidden lg:flex ">
+              <Phone />
+            </div>
+          </section>
+          <section className="max-w-[750px] w-full flex flex-col p-10 mx-auto">
+            {contentPage === 'links' ? <Links /> : <ProfileDetails />}
+          </section>
+        </div>
+      </main>
     </>
   )
 }
